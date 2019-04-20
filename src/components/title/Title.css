@@ -1,0 +1,28 @@
+#main {
+	color: rgb(216, 121, 31);
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+#sub {
+	text-align: center;
+	font-size: 0.65rem;
+	font-weight: bold;
+	color: white;
+}
+
+.score {
+	font-size: 0.75rem;
+	font-weight: bold;
+	color: white;
+}
+
+#message {
+	/* text-indent: 25%; */
+	background-clip: content-box;
+	background-color: white;
+
+	text-align: center;
+	/* width: auto; */
+	max-width: 75%;
+}
