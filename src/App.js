@@ -13,19 +13,19 @@ class App extends Component {
 	}
 
 	shuffle() {
-		let currentIndex = headshots.length, temporaryValue, randomIndex;
+		let currLength = headshots.length, temp, randItem;
 
 		// While there remain elements to shuffle...
-		while (0 !== currentIndex) {
+		while (0 !== currLength) {
 
 			// Pick a remaining element...
-			randomIndex = Math.floor(Math.random() * currentIndex);
-			currentIndex -= 1;
+			randItem = Math.floor(Math.random() * currLength);
+			currLength -= 1;
 
 			// And swap it with the current element.
-			temporaryValue = headshots[currentIndex];
-			headshots[currentIndex] = headshots[randomIndex];
-			headshots[randomIndex] = temporaryValue;
+			temp = headshots[currLength];
+			headshots[currLength] = headshots[randItem];
+			headshots[randItem] = temp;
 		}
 
 		this.setState({ pics: headshots });
