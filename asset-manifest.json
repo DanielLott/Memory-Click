@@ -1,13 +1,13 @@
 {
-  "main.css": "%20//daniellott.github.io/Memory-Click/static/css/main.6aff5123.chunk.css",
-  "main.js": "%20//daniellott.github.io/Memory-Click/static/js/main.eaf4f6a7.chunk.js",
-  "main.js.map": "%20//daniellott.github.io/Memory-Click/static/js/main.eaf4f6a7.chunk.js.map",
-  "runtime~main.js": "%20//daniellott.github.io/Memory-Click/static/js/runtime~main.86cb524b.js",
-  "runtime~main.js.map": "%20//daniellott.github.io/Memory-Click/static/js/runtime~main.86cb524b.js.map",
-  "static/js/2.884c28c3.chunk.js": "%20//daniellott.github.io/Memory-Click/static/js/2.884c28c3.chunk.js",
-  "static/js/2.884c28c3.chunk.js.map": "%20//daniellott.github.io/Memory-Click/static/js/2.884c28c3.chunk.js.map",
-  "index.html": "%20//daniellott.github.io/Memory-Click/index.html",
-  "precache-manifest.096a5041a0b4e4d915e5b8e0f2a4b836.js": "%20//daniellott.github.io/Memory-Click/precache-manifest.096a5041a0b4e4d915e5b8e0f2a4b836.js",
-  "service-worker.js": "%20//daniellott.github.io/Memory-Click/service-worker.js",
-  "static/css/main.6aff5123.chunk.css.map": "%20//daniellott.github.io/Memory-Click/static/css/main.6aff5123.chunk.css.map"
+  "main.css": "/Memory-Click/static/css/main.6aff5123.chunk.css",
+  "main.js": "/Memory-Click/static/js/main.793f9b4f.chunk.js",
+  "main.js.map": "/Memory-Click/static/js/main.793f9b4f.chunk.js.map",
+  "runtime~main.js": "/Memory-Click/static/js/runtime~main.65553346.js",
+  "runtime~main.js.map": "/Memory-Click/static/js/runtime~main.65553346.js.map",
+  "static/js/2.884c28c3.chunk.js": "/Memory-Click/static/js/2.884c28c3.chunk.js",
+  "static/js/2.884c28c3.chunk.js.map": "/Memory-Click/static/js/2.884c28c3.chunk.js.map",
+  "index.html": "/Memory-Click/index.html",
+  "precache-manifest.d38f530ef19de475cc2d782883c439bc.js": "/Memory-Click/precache-manifest.d38f530ef19de475cc2d782883c439bc.js",
+  "service-worker.js": "/Memory-Click/service-worker.js",
+  "static/css/main.6aff5123.chunk.css.map": "/Memory-Click/static/css/main.6aff5123.chunk.css.map"
 }
