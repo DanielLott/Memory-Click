@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "%20//daniellott.github.io/Memory-Click/precache-manifest.096a5041a0b4e4d915e5b8e0f2a4b836.js"
+  "/Memory-Click/precache-manifest.1962dc9fd1da9a38343d241c696e6c48.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("%20//daniellott.github.io/Memory-Click/index.html", {
+workbox.routing.registerNavigationRoute("/Memory-Click/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
