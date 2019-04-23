@@ -1,7 +1,7 @@
 #main {
 	color: rgb(216, 121, 31);
 	font-weight: bold;
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 }
 
 #sub {
@@ -12,6 +12,12 @@
 }
 
 .score {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: white;
+}
+
+.topscore {
 	font-size: 0.75rem;
 	font-weight: bold;
 	color: white;
@@ -21,8 +27,7 @@
 	/* text-indent: 25%; */
 	background-clip: content-box;
 	background-color: white;
-
 	text-align: center;
 	/* width: auto; */
-	max-width: 75%;
+	/* max-width: 75%; */
 }

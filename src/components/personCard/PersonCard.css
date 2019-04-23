@@ -1,32 +1,16 @@
 .col {
-	/* background: #fff; */
-	/* border-radius: 2px; */
-	/* height: 325px; */
-	/* position: relative; */
 	width: 10rem;
-	/* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
-	/* overflow: hidden; */
-	transition: all 0.2s ease;
-}
-
-.col:hover {
-	/* width: 95%; */
-	transform: scale(1.05);
-}
-
-img {
-	width: 9rem;
 }
 
 #cards {
 	max-width: 30%;
-	/* overflow: hidden; */
 }
 
-#cards img {
+img {
+	width: 9rem;
 	transition: all 0.4s ease;
 }
 
-#cards:hover img {
+img:hover {
 	transform: scale(1.1);
 }
