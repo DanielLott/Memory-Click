@@ -1,13 +1,13 @@
 {
-  "main.css": "/Memory-Click/static/css/main.aded7f35.chunk.css",
-  "main.js": "/Memory-Click/static/js/main.de6e96f2.chunk.js",
-  "main.js.map": "/Memory-Click/static/js/main.de6e96f2.chunk.js.map",
+  "main.css": "/Memory-Click/static/css/main.72e7529e.chunk.css",
+  "main.js": "/Memory-Click/static/js/main.b6e1561f.chunk.js",
+  "main.js.map": "/Memory-Click/static/js/main.b6e1561f.chunk.js.map",
   "runtime~main.js": "/Memory-Click/static/js/runtime~main.65553346.js",
   "runtime~main.js.map": "/Memory-Click/static/js/runtime~main.65553346.js.map",
   "static/js/2.884c28c3.chunk.js": "/Memory-Click/static/js/2.884c28c3.chunk.js",
   "static/js/2.884c28c3.chunk.js.map": "/Memory-Click/static/js/2.884c28c3.chunk.js.map",
   "index.html": "/Memory-Click/index.html",
-  "precache-manifest.1962dc9fd1da9a38343d241c696e6c48.js": "/Memory-Click/precache-manifest.1962dc9fd1da9a38343d241c696e6c48.js",
+  "precache-manifest.17cbca7a9f33b4e06a906cdc5f8e0af5.js": "/Memory-Click/precache-manifest.17cbca7a9f33b4e06a906cdc5f8e0af5.js",
   "service-worker.js": "/Memory-Click/service-worker.js",
-  "static/css/main.aded7f35.chunk.css.map": "/Memory-Click/static/css/main.aded7f35.chunk.css.map"
+  "static/css/main.72e7529e.chunk.css.map": "/Memory-Click/static/css/main.72e7529e.chunk.css.map"
 }
