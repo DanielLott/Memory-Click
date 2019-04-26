@@ -1,108 +1,165 @@
 import React, { Component } from 'react';
 import './App.css';
 import PersonCard from "./components/personCard/PersonCard";
-import Wrapper from "./components/wrapper/Wrapper";
 import Title from "./components/title/Title";
 import Cards from "./components/cards/Cards";
-import headshots from "./people.json";
+import Ohana from "./components/ohana/Ohana";
+import people from "./people.json";
+
+// const lb = people.map(x => x);
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			pics: headshots,
 			currentScore: 0,
 			topScore: 0,
-			gathered: [],
-			message: "Pick each family member only once!"
+			lastClickId: null,
+			gatheredIDs: [],
+			leftBehind: people.map(x => x),
+			scoring: true,
 		}
 	}
 
-	personClick(idP2, nameP2) {
-		this.score(idP2, nameP2);
-		this.shuffle();
-	}
-
-	score(idP3, nameP3) {
+	personClick(idP2) {
+		console.log(this.state.gatheredIDs.length);
 		// save current score in state to temp variable
 		let currentScore = this.state.currentScore;
-		// save gathered array to in state to temp variable
-		let gathered = this.state.gathered;
-		// if selection is not in gathered array, then do the following:
-		if (gathered.indexOf(idP3) === -1) {
-			// push id of selection to gathered array
-			gathered.push(idP3);
-			// reset state:
-			this.setState({
-				// incrementing score
-				currentScore: ++currentScore,
-				// and updating gathered array with new id added
-				gathered: gathered
-			});
-			if (currentScore > this.state.topScore) {
+		// save gatheredIDs array to in state to temp variable
+		let gatheredIDs = this.state.gatheredIDs;
+		let leftBehind = this.state.leftBehind;
+		// console.log(leftBehind);
+		// console.log(gatheredIDs);
+		// if all have not been gathered yet:
+		if (this.state.gatheredIDs.length < people.length) {
+			// if selection is not in gatheredIDs array:
+			if (gatheredIDs.indexOf(idP2) === -1) {
+				// push person's id to gatheredIDs array:
+				gatheredIDs.push(idP2);
+				// remove person from left behind
+				delete leftBehind[idP2 - 1];
+				// reset state:
 				this.setState({
-					topScore: currentScore
-				})
+					// updating lastClickId:
+					lastClickId: idP2,
+					// and updating gatheredIDs and leftBehind
+					gatheredIDs: gatheredIDs,
+					leftBehind: leftBehind
+				});
+				console.log(this.state.gatheredIDs.length);
+				if (this.state.scoring) {
+					this.setState({
+						// incrementing score
+						currentScore: ++currentScore
+					});
+				}
+				if (currentScore > this.state.topScore) {
+					this.setState({
+						topScore: currentScore
+					})
+				}
+				if (currentScore === people.length) {
+					this.setState({
+						scoring: false
+					})
+				}
+
+			} else {
+				// // push person's id to gatheredIDs array:
+				// gatheredIDs.push(idP2);
+				// // remove person from left behind
+				// delete leftBehind[idP2 - 1];
+				// // reset state:
+				this.setState({
+					// updating lastClickId and scoring:
+					lastClickId: idP2,
+					scoring: false
+				});
 			}
-			// call alert method passing the current score as parameter (simplifies alert method code)
-			this.alert(currentScore, nameP3);
-
-		} else {
-			this.setState({
-				currentScore: 0,
-				gathered: [],
-				message: `You already picked ${nameP3}! Let's start again!`
-			});
 		}
+		// else if (this.state.gatheredIDs.length === people.length) {
+
+		// }
 	}
 
-	alert(score, nameP4) {
-		if (score > 0 && score < this.state.pics.length) {
-			this.setState({
-				message: `You chose ${nameP4}! You have ${this.state.pics.length - score} left to gather!`
-			});
-		} else {
-			this.setState({
-				message: `${nameP4} was the last one! You remembered the whole family!`
-			});
-		}
-	}
-
-	shuffle() {
-		for (let currEndIndex = headshots.length - 1; currEndIndex > 0; currEndIndex--) {
+	shuffle(array) {
+		for (let currEndIndex = array.length - 1; currEndIndex > 0; currEndIndex--) {
 			const randIndexValue = Math.floor(Math.random() * (currEndIndex + 1));
-			[headshots[currEndIndex], headshots[randIndexValue]] = [headshots[randIndexValue], headshots[currEndIndex]];
+			[array[currEndIndex], array[randIndexValue]] = [array[randIndexValue], array[currEndIndex]];
 		}
+		return array;
+	}
 
-		this.setState({ pics: headshots });
+	resetGame() {
+		this.setState({
+			currentScore: 0,
+			lastClickId: null,
+			gatheredIDs: [],
+			leftBehind: people.map(x => x),
+			scoring: true
+		});
 	}
 
 
 
 	render() {
-
+		// console.log(this.state.gatheredIDs);
+		// console.log(this.state.leftBehind);
+		console.log(people.length);
+		console.log(this.state.gatheredIDs.length);
 		return (
-			<Wrapper>
+			<div>
 				<Title
-					message={this.state.message}
+					lCN={(this.state.gatheredIDs.length === 0) ? (null) : (people[this.state.lastClickId - 1].name)}
+					scoring={this.state.scoring}
 					score={this.state.currentScore}
+					maxScore={people.length}
 					topScore={this.state.topScore}
+					complete={this.state.gatheredIDs.length === people.length}
 					subtitle="Don't leave anyone behind and don't forget who you've chosen!">
 					Ohana Game
 				</Title>
 				<Cards>
-					{this.state.pics.map(hs =>
-						<PersonCard
-							click={() => this.personClick(hs.id, hs.name)}
-							key={hs.id}
-							id={hs.id}
-							name={hs.name}
-							image={hs.image}
-						/>
-					)}
-
+					{
+						(this.state.scoring)
+							?
+							(this.shuffle(people.map(hs =>
+								<PersonCard
+									click={() => this.personClick(hs.id)}
+									key={hs.id}
+									id={hs.id}
+									name={hs.name}
+									image={hs.image}
+								/>
+							)))
+							:
+							(this.state.gatheredIDs.length === people.length)
+								?
+								(<></>)
+								:
+								(this.state.leftBehind.map(hs =>
+									<PersonCard
+										click={() => this.personClick(hs.id)}
+										key={hs.id}
+										id={hs.id}
+										name={hs.name}
+										image={hs.image}
+									/>
+								))
+					}
 				</Cards>
-			</Wrapper>
+				{
+					(this.state.gatheredIDs.length === people.length)
+						?
+						(<Ohana
+							win={this.state.currentScore===people.length}
+							click={() => this.resetGame()}
+						>
+						</Ohana>)
+						:
+						(<></>)
+				}
+			</div >
 		);
 	}
 }

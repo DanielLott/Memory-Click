@@ -1,13 +1,13 @@
 .col {
-	width: 10rem;
+	/* width: 10rem; */
 }
 
 #cards {
-	max-width: 30%;
+	/* max-width: 30%; */
 }
 
 img {
-	width: 9rem;
+	/* width: 9rem; */
 	transition: all 0.4s ease;
 }
 

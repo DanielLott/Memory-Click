@@ -5,7 +5,7 @@
 }
 
 #sub {
-	text-align: center;
+	/* text-align: center; */
 	font-size: 0.65rem;
 	font-weight: bold;
 	color: white;
@@ -25,9 +25,9 @@
 
 #message {
 	/* text-indent: 25%; */
-	background-clip: content-box;
+	/* background-clip: content-box;
 	background-color: white;
-	text-align: center;
+	text-align: center; */
 	/* width: auto; */
 	/* max-width: 75%; */
 }

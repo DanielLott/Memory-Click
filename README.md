@@ -10,4 +10,5 @@ week 19 react homework
 
 ## Technologies used:
 * React, via create-react-app
+* Bootstrap, for dynamic styling
 * GitHub pages, for deployment
