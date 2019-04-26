@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9255fa05fef533e595d6",
+    "revision": "7acc9fca8869393a2e1b",
     "url": "/Memory-Click/static/css/main.8d98b094.chunk.css"
   },
   {
-    "revision": "9255fa05fef533e595d6",
-    "url": "/Memory-Click/static/js/main.485a607c.chunk.js"
+    "revision": "7acc9fca8869393a2e1b",
+    "url": "/Memory-Click/static/js/main.439e67f0.chunk.js"
   },
   {
     "revision": "a6246469b97c7601d5c4",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/Memory-Click/static/js/2.884c28c3.chunk.js"
   },
   {
-    "revision": "1b577d19f81516da70682a44d4d17b1a",
+    "revision": "766b6a9e236e2f58c4beb16263a7090a",
     "url": "/Memory-Click/index.html"
   }
 ];
