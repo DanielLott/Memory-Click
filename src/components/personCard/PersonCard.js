@@ -3,7 +3,7 @@ import "./PersonCard.css";
 
 function PersonCard(props) {
 	return (
-		<div id="cards" className="d-inline-block m-1">
+		<div className="m-2">
 			<img
 				alt={props.name}
 				src={process.env.PUBLIC_URL + `/pictures/${props.image}`}
